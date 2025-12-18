@@ -383,36 +383,36 @@
 
 // postfix to prefix conversion
 
-#include <bits/stdc++.h>
-using namespace std;
+// #include <bits/stdc++.h>
+// using namespace std;
 
-string postfixToPrefix(string s)
-{
-    stack<string> st;
-    string x;
-    for (char ch : s)
-    {
-        if (isalnum(ch))
-        {
-            st.push(string(1, ch));
-        }
-        else
-        {
-            string t1 = st.top();
-            st.pop();
-            string t2 = st.top();
-            st.pop();
-            x = ch + t2 + t1;
-            st.push(x);
-        }
-    }
-    return st.top();
-}
+// string postfixToPrefix(string s)
+// {
+//     stack<string> st;
+//     string x;
+//     for (char ch : s)
+//     {
+//         if (isalnum(ch))
+//         {
+//             st.push(string(1, ch));
+//         }
+//         else
+//         {
+//             string t1 = st.top();
+//             st.pop();
+//             string t2 = st.top();
+//             st.pop();
+//             x = ch + t2 + t1;
+//             st.push(x);
+//         }
+//     }
+//     return st.top();
+// }
 
-int main()
-{
-    string s;
-    cin >> s;
-    cout << postfixToPrefix(s);
-    return 0;
-}
+// int main()
+// {
+//     string s;
+//     cin >> s;
+//     cout << postfixToPrefix(s);
+//     return 0;
+// }
